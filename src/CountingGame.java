@@ -45,7 +45,7 @@ public class CountingGame
         playerIter = players.getIterator();
         
 
-//        while ( players.getLength() > 1)
+        while ( players.getLength() > 1)
         {
         
             // Start the rhyme at the beginning each time
@@ -81,7 +81,11 @@ public class CountingGame
     public static <T> void displayCollection(Iterator<T> iterator)
     {
         // COMPLETE THIS METHOD
-        
+    	System.out.print("{ ");
+        while (iterator.hasNext()) {
+        	System.out.print("<"+iterator.next()+"> ");
+        }
+        System.out.print("}");
     }
 
     
@@ -101,11 +105,28 @@ public class CountingGame
     public static boolean doRhymePart(Iterator<Integer> playerIter, 
                                Iterator<String> rhymeIter)
     {
+    	//System.out.println("Doing Rhyme...");
         String rhymeWord = null;
         Integer player = null;
         boolean removedAPlayer = false;
         
         // COMPLETE THIS METHOD 
+        while (rhymeIter.hasNext()) {
+        	if (playerIter.hasNext()) {
+        		rhymeWord = rhymeIter.next();
+        		player = playerIter.next();
+            	System.out.println("Player "+player+": "+rhymeWord);
+            	if(!rhymeIter.hasNext()){
+            		System.out.println("Removing player "+player);
+                    playerIter.remove();
+                    return true;
+            	}
+        	} else {
+        		//System.out.println("Recalling... need more players");
+        		return false;
+        	}
+        }
+       
         
         return true;
 

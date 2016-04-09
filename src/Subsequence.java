@@ -41,45 +41,7 @@ public class Subsequence
      */
     private static <T> boolean subSequence(ListWithIteratorInterface<T> sequence1, 
                                            ListWithIteratorInterface<T> sequence2)
-    {
-        /*boolean result = false;
-        
-        int seq1Pos = 0;
-        boolean compare = true;
-        boolean match = false;
-        
-        if (sequence1.isEmpty() || (sequence1.isEmpty() && sequence2.isEmpty())) {
-        	return true;
-        } else if(sequence2.isEmpty()) {
-        	return false;
-        } else {
-        	int s1Count = 0;
-        	Iterator<T> itr1 = sequence1.iterator();
-        	Iterator<T> itr2 = sequence2.iterator();
-        	
-        	while (itr1.hasNext()) {
-        		T c1 = itr1.
-        	}
-        	
-        	do {
-        		Iterator<T> it1 = sequence1.iterator();
-        		while (it1.hasNext()) {
-                	T subCompare = it1.next();
-                	
-                	Iterator<T> it2 = sequence2.iterator();
-                	int seq2Pos = 0;
-                	
-                	while (it2.hasNext()) {
-                		if (it2.next() == subCompare) {
-                			it1.next();
-                			
-                		}
-                	}
-                	
-                }
-        	} while (compare);
-    	}*/
-        
+    {   
     	Iterator<T> itr1 = sequence1.iterator();
     	Iterator<T> itr2 = sequence2.iterator();
         
@@ -94,9 +56,7 @@ public class Subsequence
     		} while (!item1.equals(item2));
     	}
         
-        
-        return true;
-                                    
+        return true;                
     }
 
 
