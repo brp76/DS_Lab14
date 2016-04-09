@@ -39,15 +39,63 @@ public class Subsequence
      * 
      * @return    a true if the first list is a subsequence of the other
      */
-    private static <T> boolean  subSequence(ListWithIteratorInterface<T> sequence1, 
+    private static <T> boolean subSequence(ListWithIteratorInterface<T> sequence1, 
                                            ListWithIteratorInterface<T> sequence2)
     {
+        /*boolean result = false;
         
-        boolean result = false;
+        int seq1Pos = 0;
+        boolean compare = true;
+        boolean match = false;
         
-        // IMPLEMENT THIS METHOD
+        if (sequence1.isEmpty() || (sequence1.isEmpty() && sequence2.isEmpty())) {
+        	return true;
+        } else if(sequence2.isEmpty()) {
+        	return false;
+        } else {
+        	int s1Count = 0;
+        	Iterator<T> itr1 = sequence1.iterator();
+        	Iterator<T> itr2 = sequence2.iterator();
+        	
+        	while (itr1.hasNext()) {
+        		T c1 = itr1.
+        	}
+        	
+        	do {
+        		Iterator<T> it1 = sequence1.iterator();
+        		while (it1.hasNext()) {
+                	T subCompare = it1.next();
+                	
+                	Iterator<T> it2 = sequence2.iterator();
+                	int seq2Pos = 0;
+                	
+                	while (it2.hasNext()) {
+                		if (it2.next() == subCompare) {
+                			it1.next();
+                			
+                		}
+                	}
+                	
+                }
+        	} while (compare);
+    	}*/
         
-        return result;
+    	Iterator<T> itr1 = sequence1.iterator();
+    	Iterator<T> itr2 = sequence2.iterator();
+        
+    	while (itr1.hasNext()) {
+    		T item1 = itr1.next();
+    		T item2;
+    		do {
+    			if (!itr2.hasNext()) {
+    				return false;
+    			}
+    			item2 = itr2.next();
+    		} while (!item1.equals(item2));
+    	}
+        
+        
+        return true;
                                     
     }
 
