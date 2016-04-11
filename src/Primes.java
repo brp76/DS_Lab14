@@ -44,15 +44,30 @@ public class Primes
             
             System.out.println("The candidates list is ");
             // USE AN ITERATOR TO PRINT OUT THE CANDIDATES
+            Iterator<Integer> itrCand = candidates.iterator();
+            while (itrCand.hasNext()) {
+            	System.out.print("<"+itrCand.next()+"> ");
+            }
+            System.out.println();
             
             System.out.println("The primes list is " );
 
             // USE AN ITERATOR TO PRINT OUT THE PRIMES
+            Iterator<Integer> itrPrime = primes.iterator();
+            while (itrPrime.hasNext()) {
+            	System.out.print("<"+itrPrime.next()+"> ");
+            }
+            System.out.println();
             
             System.out.println("The composites list is ");
 
             // USE AN ITERATOR TO PRINT OUT THE COMPOSITES
-    
+            Iterator<Integer> itrComp = composites.iterator();
+            while (itrComp.hasNext()) {
+            	System.out.print("<"+itrComp.next()+"> ");
+            }
+            System.out.println();
+            
             System.out.println();           
         }
         
